@@ -1,0 +1,41 @@
+{
+  "name": "@kyleshevlin/stat-math",
+  "version": "0.1.1",
+  "description": "a set of typesafe math functions geared towards statistics",
+  "type": "module",
+  "source": "src/index.ts",
+  "main": "./dist/stat-math.cjs",
+  "module": "./dist/stat-math.module.js",
+  "unpkg": "./dist/stat-math.umd.js",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "exports": {
+    "require": "./dist/stat-math.cjs",
+    "default": "./dist/stat-math.modern.js"
+  },
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "format": "prettier --write src/**/*.ts",
+    "prerelease": "rm -rf dist && npm run build",
+    "release": "npx np",
+    "test": "vitest"
+  },
+  "author": "Kyle Shevlin <kyle.a.shevlin@gmail.com> (https://kyleshevlin.com/)",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kyleshevlin/stat-math.git"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "microbundle": "^0.15.1",
+    "prettier": "^3.5.2",
+    "vitest": "^3.0.7"
+  }
+}
