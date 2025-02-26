@@ -1,6 +1,6 @@
 {
   "name": "@kyleshevlin/stat-math",
-  "version": "0.0.0",
+  "version": "0.1.0",
   "description": "a set of typesafe math functions geared towards statistics",
   "type": "module",
   "source": "src/index.ts",
